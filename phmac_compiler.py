@@ -173,5 +173,16 @@ def load_and_run(input_filename):
     my_encoder = HTML_encoder()
     my_encoder(node)
 
+def partial(input_filename,output_filename):
+    node = load(input_filename)
+    my_encoder = HTML_encoder()
+    s = my_encoder(node)
+    s = s[21:-7]
+    outfile = open(filename,"w")
+    outfile.truncate(0)
+    outfile.seek(0,0)
+    outfile.write(s)
+    outfile.close()
+
 if __name__=="__main__":
     main(sys.argv[1],sys.argv[2])
