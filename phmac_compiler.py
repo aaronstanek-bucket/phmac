@@ -178,7 +178,7 @@ def partial(input_filename,output_filename):
     my_encoder = HTML_encoder()
     s = my_encoder(node)
     s = s[21:-7]
-    outfile = open(filename,"w")
+    outfile = open(output_filename,"w")
     outfile.truncate(0)
     outfile.seek(0,0)
     outfile.write(s)
